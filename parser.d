@@ -111,7 +111,7 @@ class BencodeParser{
 
 unittest{
     import std.file;
-    BencodeBuilder builder = new TorrentFileNodeBencodeBuilder();
+    BencodeBuilder builder = new NodeBencodeBuilder();
     BencodeParser parser = new BencodeParser(builder); 
     string data = to!string(read("1.torrent"));
     parser.construct(data); 
